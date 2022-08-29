@@ -1,12 +1,14 @@
 import * as React from "react";
-import Navbar from "react-bootstrap/Navbar";
+import Header from "./layouts/Header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
-
+import "./App.css";
 import { BrowserRouter as Router , Routes, Route, Link } from "react-router-dom";
 
+import Login from "./components/user/login";
+import Register from "./components/user/register";
 import EditBook from "./components/book/edit.component";
 import BookList from "./components/book/list.component";
 import CreateBook from "./components/book/create.component";
@@ -17,20 +19,7 @@ import CreateProduct from "./components/product/create.component";
 function App() {
   return (
   <Router>
-    <Navbar bg="primary">
-      <Container>
-        <Link to={"/"} className="navbar-brand text-white">
-          Basic Crud App
-        </Link>
-        <Link to={"/product"} className="navbar-brand text-white">
-          Product
-        </Link>
-        <Link to={"/book"} className="navbar-brand text-white">
-          Book
-        </Link>
-      </Container>
-    </Navbar>
-
+    <Header />
     <Container className="mt-5">
       <Row>
         <Col md={12}>
@@ -41,6 +30,8 @@ function App() {
             <Route path="/book/create" element={<CreateBook />} />
             <Route path="/book/edit/:id" element={<EditBook />} />
             <Route exact path='/book' element={<BookList />} />
+            <Route exact path='/login' element={<Login />} />
+            <Route exact path='/register' element={<Register />} />
           </Routes>
         </Col>
       </Row>

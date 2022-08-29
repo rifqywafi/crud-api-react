@@ -3,10 +3,20 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 6vmin;
   pointer-events: none;
 }
-
+.Font{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(22, 160, 175);
+  text-decoration: none;
+  margin-right:10px;
+}
+.Font:hover{
+  color:rgb(23, 155, 169);
+  transition:0.5s;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

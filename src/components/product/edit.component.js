@@ -54,7 +54,7 @@ export default function EditUser() {
         icon:"success",
         text:data.message
       })
-      navigate("/")
+      navigate("/product")
     }).catch(({response})=>{
       if(response.status===422){
         setValidationError(response.data.errors)
