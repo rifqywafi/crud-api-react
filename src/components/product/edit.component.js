@@ -7,7 +7,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-export default function EditUser() {
+
+export default function EditProduct() {
   const navigate = useNavigate();
 
   const { id } = useParams()

@@ -117,7 +117,7 @@ export default function CreateBook() {
                     <Col>
                       <Form.Group controlId="tahun_terbit" className="mb-3">
                         <Form.Label>Tahun Terbit</Form.Label>
-                        <Form.Control type="date" onChange={(event)=>{
+                        <Form.Control type="date" selected={tahun_terbit} onChange={(event)=>{
                               setTahun(event.target.value)
                             }}/>
                       </Form.Group>
